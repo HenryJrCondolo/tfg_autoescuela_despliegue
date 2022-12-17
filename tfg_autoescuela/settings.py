@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'autoescuela.apps.AutoescuelaConfig',
     'django.contrib.admin',
     'rest_framework',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
@@ -50,6 +51,12 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.common.CommonMiddleware',
+]
+
+CORS_ALLOWED_ORIGINS = [
+    'http://autoescuelalupita.pythonanywhere.com/',
 ]
 
 ROOT_URLCONF = 'tfg_autoescuela.urls'

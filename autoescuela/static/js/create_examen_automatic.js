@@ -4,10 +4,12 @@ var PreguntasPermiso = [];
 var miform = document.getElementById("form"); //Variable para obtener datos del formulario
 var csrftoken = miform.querySelector("[name=csrfmiddlewaretoken]").value; //Variable para guardar el token csrf
 
+const URLAPI='http://autoescuelalupita.pythonanywhere.com/'
+
 btnGenerar.addEventListener("click", async function () {
     //Funcion para generar el examen
     try {
-        const res = await fetch("http://127.0.0.1:8000/api/pregunta/");
+        const res = await fetch(URLAPI+"api/pregunta/");
         const data = await res.json();
 
         if (data) {
@@ -99,7 +101,7 @@ document
             });
             let nombre = document.getElementById("nombre_Examen").value;
             console.log(id_preguntas);
-            const res = await fetch("http://127.0.0.1:8000/api/examen/", {
+            const res = await fetch(URLAPI+"api/examen/", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",

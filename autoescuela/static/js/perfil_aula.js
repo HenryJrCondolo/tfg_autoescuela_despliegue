@@ -1,4 +1,4 @@
-const URLAPI = "http://127.0.0.1:8000/"; // Cambiar por la URL de la API
+const URLAPI = 'http://autoescuelalupita.pythonanywhere.com'; // Cambiar por la URL de la API
 
 
 const cargaInicial = async () => {//carga inicial
