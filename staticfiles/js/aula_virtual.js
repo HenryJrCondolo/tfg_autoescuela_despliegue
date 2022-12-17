@@ -18,7 +18,7 @@ var examenTerminado = false; //Variable para saber si el examen ha terminado
 var miform = document.getElementById("form"); //Variable para obtener datos del formulario
 var csrftoken = miform.querySelector("[name=csrfmiddlewaretoken]").value; //Variable para guardar el token csrf
 
-const URLAPI = "http://127.0.0.1:8000/";
+const URLAPI = "http://autoescuelalupita.pythonanywhere.com/";
 
 //Alerta para que no se cierre la pagina sin guardar
 window.addEventListener("beforeunload", function (event) {
