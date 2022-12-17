@@ -1,0 +1,58 @@
+{% extends "base_generic.html" %} {% block content %}
+
+{% block title %}
+  <title>Inicio sesión</title>
+  {% endblock %}
+
+<!------------------CSS------------------>
+
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/login.css' %}" />
+
+<!-------------Start loginForm-------------->
+
+<div class="loginform" id="login-form" style="width: 500px; height: 525px">
+  <form method="post" action="{% url 'login' %}" style="margin: 0px auto">
+    <div>
+      {% csrf_token %}
+      <a>
+        <h5>Incio de sesión</h5>
+      </a>
+      <div>
+        
+        <label for="exampleInputEmail1" class="form-label">Email/Usuario</label>
+        <a class="forminput">{{ form.username }}</a>
+        <div id="emailHelp" class="form-text">
+          Nunca compartiremos su correo electrónico con nadie más.
+        </div>
+      </div>
+      <div>
+        <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+        <a class="forminput">{{ form.password }}</a>
+      </div>
+      <div>
+        <input type="submit" class="btn btn-primary" value="login" />
+        <input type="hidden" name="next" value="{{ next }}" />
+      </div>
+      {# Assumes you setup the password_reset view in your URLconf #}
+      <p><a href="{% url 'password_reset' %}">¿Contraseña olvidada?</a></p>
+    </div>
+  </form>
+
+  <!-- END LOGINFORM -->
+  <!-- START ERROR MESSAGE -->
+
+  {% if form.errors %}
+        <p>
+          Tu usuraio y contraseña no coinciden. Por favor, intentelo de nuevo.
+        </p>
+        {% endif %} {% if next %} {% if user.is_authenticated %}
+        <p>
+          Su cuenta no tiene acceso a esta página. Para proceder, por favor
+          inicie sesión con una cuenta que tenga acceso.
+        </p>
+        {% else %}
+        {% endif %} {% endif %}
+</div>
+
+{% endblock %}

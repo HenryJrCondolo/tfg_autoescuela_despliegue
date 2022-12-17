@@ -1,0 +1,79 @@
+{% extends 'base_generic_admin.html' %}
+{% block content %}
+
+{% block title %}
+<title>Admin | Listado de Tema</title>
+{% endblock %}
+<!-------------CONTENDER DEL Administrador-------------->
+{% if object_list %}
+<div class=" card" id="tablaUsuario">
+    <div class="card-header">
+        <div class="text-center">
+            <h1 class="text-center">Listado de Temas</h1>
+        </div>
+        <div class="row">
+            <div class="col text-center">
+                <button class="btn btn-primary"><a href="{% url 'registar_tema' %}">Crear Tema</a></button>
+            </div>
+            <div class="col">
+                <form class="d-flex" method="get" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" name="buscar"
+                        aria-label="Buscar tema" value="{{request.GET.buscar}}">
+                    <button class="btn btn-outline-success" type="submit">Buscar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="table-responsive-md ">
+        <table class="table table-striped"">
+            <thead class=" table-dark">
+            <tr>
+                <th>Tema</th>
+                <th>Descripcion</th>
+                <th>Acciones</th>
+            </tr>
+            </thead>
+            <tbody class="table table-striped">
+                {% for tema in object_list %}
+                <tr>
+                    <td>{{tema.tema}}</td>
+                    <td>{{tema.descripcion}}</td>
+                    <td>
+                        <div class="row">
+                            <button class="btn btn-primary"><a
+                                    href="{% url 'modificar_tema' tema.id_Tema %}">Editar</a></button>
+                        </div>
+                        <div class="row">
+                            <button class="btn btn-danger"><a
+                                    href="{% url 'eliminar_tema' tema.id_Tema %}">Eliminar</a></button>
+                        </div>
+                </tr>
+                {% endfor %}
+            </tbody>
+            <tfoot>
+                <tr class="text-center">
+                    <td COLSPAN="5">
+                        <div>
+                            {% if object_list.paginator.num_pages > 1 %}
+                            <p>Pagina {{object_list.number}} de {{object_list.paginator.num_pages}}</p>
+                            {% if object_list.has_previous %}
+                            <a class="btn btn-primary"
+                                href="?page={{object_list.previous_page_number}}{% if request.GET.buscar %}&buscar={{ request.GET.buscar }}{% endif %}">Anterior</a>
+                            {% endif %}
+                            {% if object_list.has_next %}
+                            <a class="btn btn-primary"
+                                href="?page={{object_list.next_page_number}}{% if request.GET.buscar %}&buscar={{ request.GET.buscar }}{% endif %}">Siguiente</a>
+                            {% endif %}
+                            {% endif %}
+                        </div>
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+</div>
+{% else %}
+<p>NO existen temas</p>
+<button class="btn btn-primary"><a href="{% url 'index' %}">Incio</a></button>
+{% endif %}
+{% endblock %}

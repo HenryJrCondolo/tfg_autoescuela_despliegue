@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<!------ENCABEZADO DE LA PAGINA------>
+
+<head>
+  {% block title %}
+  <title>Autoescuela | Cuestionario</title>
+  {% endblock %}
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  {% load static %}
+  <link rel="icon" href="{% static 'icono/iconoAutoescuela-removebg-preview.png' %}" sizes="16x16" type="image/png">
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'css/aulavirtual.css' %}" />
+</head>
+<!------CUERPO DE LA PAGINA------>
+
+<body>
+  {% block sidebar %}
+  <!------BARRA DE NAVEGACION------>
+  <header>
+    <nav class="navbar navbar-expand-md minavbar">
+      <div class="container">
+        <a class="navbar-brand">
+          {% load static %}
+          <img src="{% static 'icono/iconoAutoescuela-removebg-preview.png' %}" width="50px" />
+          Autoescuela Lupita
+        </a>
+        <div class="" id="temporizador"></div>
+      </div>
+      
+    </nav>
+  </header>
+  {% endblock %}
+
+  <!------CONTENIDO DE LA PAGINA------>
+  <!------APARTADO DE LAS PREGUNTAS------>
+  {% block content %}
+  <div class="preguntaform" id="form">
+    {% csrf_token %}
+    <h1 class="container-fluid text-center" id="question_count"></h1>
+    <div class="row">
+      <!--PREGUNTA E IMAGEN DE LA PREGUNTA-->
+      <div class="col-md-4 text-center">
+        {% load static %}
+        <a> <img id="imgPregunta"> </a>
+      </div>
+      <div class="col-md-8">
+        <h5 id="question"></h5>
+        <div class="container row">
+          <!--RESPUESTAS POSIBLES-->
+          <div class="form-check ">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+            <label class="form-check-label" id="op1" for="flexRadioDefault1">
+            </label>
+          </div>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+          <label class="form-check-label" id="op2" for="flexRadioDefault2">
+
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3">
+          <label class="form-check-label" id="op3" for="flexRadioDefault3">
+          </label>
+        </div>
+      </div>
+    </div>
+    <!--BOTONES DE SIGUIENTE, FINALIZAR EXAMEN Y SALIR DEL EXAMEN -->
+    <div class="row">
+      <div class="container col">
+        <div class="row" style="margin-bottom: 5px ;">
+          <button type="button" class="exit btn btn-danger" id="salir" style="display: none;">Salir</button>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="container col">
+        <div class="row" style="margin-bottom: 5px ;">
+          <button type="button" class="next btn btn-primary" style="display: block;">Siguiente</button>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="container col">
+        <div class="row" style="margin-bottom: 5px ;">
+          <button class="end btn btn-warning" id="fin" style="display: none;">Finalizar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="preguntasbuttons" height="500px">
+    <div class="container">
+      <div class="row" id="row1">
+      </div>
+      <div class="row" id="row2">
+      </div>
+    </div>
+  </div>
+  </div>
+
+  {% endblock %}
+  <!------APARTADO SCRIPTS------>
+  {% block scripts %}
+  <script src="{% static 'js/aula_virtual.js' %}" type="module"></script>
+  {% endblock %}
+
+</body>
+
+</html>

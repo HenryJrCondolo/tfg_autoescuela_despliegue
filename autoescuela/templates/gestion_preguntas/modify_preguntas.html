@@ -1,0 +1,50 @@
+{% extends 'base_generic_admin.html' %}
+    {% block content %}
+    <!-------------CONTENDER DEL Administrador-------------->
+    {% block title %}
+    <title>Admin | Modificar Pregunta</title>
+    {% endblock %}
+
+    <div class=" card" id="cardRegistro">
+      <div class="card-header">
+          <h1 class="text-center">Modificación de Pregunta</h1>
+      </div>
+      <div id="" >
+        <div id="registro">
+          <form method="POST" enctype='multipart/form-data'>
+            {% csrf_token %}
+            <div class="row">
+              <div class="col">
+                <p>{{form.tema.label}}</p>
+                {{ form.tema }}
+                <p>{{form.permiso.label}}</p>
+                {{ form.permiso }}
+                <p>{{form.pregunta.label}}</p>
+                {{ form.pregunta }}
+                <p>{{form.respuesta_Falsa_1.label}}</p>
+                {{form.respuesta_Falsa_1}} 
+                
+              </div>
+              <div class="col">
+                <p>{{form.respuesta_Falsa_2.label}}</p>
+                {{ form.respuesta_Falsa_2 }}
+                <p>{{form.respuesta_Correcta.label}}</p>
+                {{ form.respuesta_Correcta }}
+                <p>{{form.imagen_pregunta.label}}</p>
+                {{ form.imagen_pregunta }}
+                <p>{{form.descripcion_adicional.label}}</p>
+                {{ form.descripcion_adicional }}
+              </div>
+            </div>
+            <div class="row">
+              <input type="submit" class="btn btn-primary" href="{% url 'listar_preguntas' %}" value="Modificar" id="btnRegistrar"></input>
+            
+              <a type="button" class="btn btn-danger" id="btnCancelar" value="Cancelar" href="{% url 'listar_preguntas' %}">Cacelar</a>
+            </div>
+            
+          </form>
+        </div>
+        
+      </div>
+  </div>
+  {% endblock %}

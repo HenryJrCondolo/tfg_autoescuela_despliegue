@@ -1,0 +1,37 @@
+{% extends 'base_generic_admin.html' %}
+    {% block content %}
+    <!-------------CONTENDER DEL Administrador-------------->
+    {% block title %}
+    <title>Admin | Modificar de Permisos</title>
+    {% endblock %}
+
+    <div class=" card" id="cardRegistro">
+      <div class="card-header">
+          <h1 class="text-center">Modificación de Permiso</h1>
+      </div>
+      <div id="" >
+        <div id="registro">
+          <form method="POST" enctype='multipart/form-data'>
+            {% csrf_token %}
+            <div class="row">
+              <div class="col">
+                <p>{{form.tipo_licencia.label}}</p>
+                {{ form.tipo_licencia }}
+                <p>{{form.descripcion.label}}</p>
+                {{ form.descripcion }}
+                <p>{{form.precio.label}}</p>
+                {{ form.precio }}
+              </div>
+            </div>
+            <div class="row">
+              <input type="submit" class="btn btn-primary" href="{% url 'listar_permisos' %}" value="Modificar" id="btnRegistrar"></input>
+            
+              <a type="button" class="btn btn-danger" id="btnCancelar" value="Cancelar" href="{% url 'listar_permisos' %}">Cacelar</a>
+            </div>
+            
+          </form>
+        </div>
+        
+      </div>
+  </div>
+  {% endblock %}

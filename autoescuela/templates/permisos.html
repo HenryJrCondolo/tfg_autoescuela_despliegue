@@ -1,0 +1,201 @@
+{% extends "base_generic.html" %}
+
+{% load static %}
+
+{% block title %}<title>Autoescuela | Permisos </title>{% endblock %}
+
+{% block content %}
+
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/autoescuela.css' %}" />
+<div class="container divPerfil">
+  {% csrf_token %}
+  <div class="row">
+    <div class="col">
+      <h1 class="text-center">Autoescuela lupita</h1>
+      <br />
+      <h5 class="text-center">Disponemos de todas las lincencias posibles</h5>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col" style="text-align: justify;">
+      <p>
+        ¿Por qué a alguien lr gustaria tener su propia licencia de conducir? Con una licencia de conducir, puedes
+        tener la
+        libertad de ir a donde quieras, cuando quieras. Ya no tendrás que depender de otros para llevarte a lugares
+        distantes o esperar a que el autobús o el tren lleguen a tu parada. Además, tener tu propia licencia de conducir
+        te brinda una sensación de independencia y empoderamiento. ¡No te quedes atrás y adquiere tu licencia de
+        conducir hoy mismo!
+      </p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <h2 class="text-center"> ¿Qué tipo de licencia de conducir necesitas?
+      </h2>
+      <br />
+    </div>
+  </div>
+  <div class="row">
+    <div class="col" style="text-align: justify;">
+      <br />
+      <p>
+        ¡Sea cual sea, la tenemos!¡Tenemos todas las licencias que necesitas! Ya sea para conducir un vehículo, operar
+        una máquina pesada, o
+        incluso para tener una licencia de pesca, tenemos todo lo que necesitas para cumplir con todas tus necesidades
+        de licenciamiento. <br /><br /> Nuestro equipo está altamente capacitado y con experiencia en todos los tipos de
+        licencias y
+        estamos dispuestos a ayudarte a obtener la licencia que necesites para llevar a cabo tus actividades. ¡No dudes
+        en contactarnos y permitirnos ayudarte a conseguir todas las licencias que necesites!
+      </p>
+    </div>
+    <div class="col">
+      <img src="/media/imagenes_autoescuela/img_permisos.png" class="img-fluid" width="350px" height="350px"
+        alt="FLota Coches" style="margin: auto; display: block; border-radius: 15px;">
+    </div>
+  </div>
+  <div class="row" style="text-align: justify;">
+    <div class="col">
+      <h2>Permiso A</h2>
+      <h4>Carnet de conducir para motocicleta</h4>
+      <br />
+      <div class="row">
+        <div class="col">
+          <img src="/media/imagenes_autoescuela/img_motos.png" class="img-fluid" width="350px" height="350px"
+            style="margin: auto; display: block; border-radius: 15px;">
+        </div>
+        <div class="col">
+          <h5>
+            ¿Quieres experimentar la emoción y la libertad de conducir una moto?
+          </h5>
+          <p>
+            ¡Entonces es hora de que te saques tu
+            carnet de conducir de moto! Con tu carnet de conducir de moto, podrás disfrutar del viento en el pelo
+            mientras te desplazas por la ciudad o por carreteras de campo. Además, conducir una moto te permite ahorrar
+            dinero en combustible y aparcar en espacios más pequeños. Tener tu propio carnet de conducir de moto también
+            te brinda una sensación de libertad y empoderamiento. ¡No esperes más y saca tu carnet de conducir de moto
+            hoy mismo!
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row" style="text-align: justify; margin-top: 30px;">
+    <div class="col">
+      <h2>Permiso B</h2>
+      <h4>Carnet de conducir para coche</h4>
+      <div class="row">
+        <div class="col">
+          <h5>¿Estás cansado de depender de tus amigos o familiares para llevarte a lugares?
+          </h5>
+          <p>¿Quieres tener la libertad de ir
+            a donde quieras, cuando quieras?
+            ¡Entonces es hora de que te saques tu propio carnet de conducir! Con tu propio
+            carnet, podrás manejar un vehículo y no depender de otros para llevarte a donde necesites ir. Además, tener
+            tu
+            propio carnet te brinda una sensación de independencia y empoderamiento.
+
+            Además, con tu propio carnet de conducir, podrás ahorrar dinero en transporte y no tendrás que depender del
+            horario de autobuses o trenes.Adquirir tu propio carnet de conducir
+            es
+            una gran inversión en tu libertad y autonomía. ¡No lo dudes más y saca tu carnet de conducir hoy mismo!
+          </p>
+        </div>
+        <div class="col">
+          <img src="/media/imagenes_autoescuela/img_coche.png" class="img-fluid" width="400px" height="400px"
+            style="margin: auto; display: block; border-radius: 15px;">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row" style="text-align: justify; margin-top: 30px;">
+    <div class="col">
+      <h2>Permiso C</h2>
+      <h4>Carnet de conducir para camion</h4>
+      <div class="row">
+        <div class="col">
+          <img src="/media/imagenes_autoescuela/img_camiones.png" class="img-fluid" width="400px" height="400px"
+            style="margin: auto; display: block; border-radius: 15px;">
+        </div>
+        <div class="col">
+          <h5>
+            ¿Estás pensando en comenzar tu carrera como conductor de camiones?
+          </h5>
+          <p>¡Si estás interesado en convertirte en un conductor de camiones experto, ¡este es el momento perfecto para
+            inscribirte en nuestro curso! Aprenderás todo lo que necesitas saber para manejar con seguridad y confianza
+            en cualquier situación, además de adquirir habilidades valiosas que te ayudarán a destacar en el campo
+            laboral. Además, nuestro equipo de instructores altamente calificados te brindará el apoyo y la guía que
+            necesitas para tener éxito. ¡No esperes más y matricúlate hoy mismo en nuestro curso de camionero!
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row" style="text-align: justify; margin-top: 30px;">
+    <div class="col">
+      <h2>Permiso D</h2>
+      <h4>Carnet de conducir para autobus</h4>
+      <div class="row">
+        <div class="col">
+          <h5>
+            ¿Quieres convertirte en un conductor de autobús experto?
+          </h5>
+          <p>¡Nuestro curso es la solución perfecta para ti! Aprenderás todo lo que necesitas saber para manejar con
+            seguridad y confianza en cualquier situación, además de adquirir habilidades valiosas que te ayudarán a
+            destacar en el campo laboral. Además, nuestro equipo de instructores altamente calificados te brindará el
+            apoyo y la guía que necesitas para tener éxito. ¡No esperes más y matricúlate hoy mismo en nuestro curso de
+            conductor de autobús!
+          </p>
+        </div>
+        <div class="col">
+          <img src="/media/imagenes_autoescuela/img_Autobus.png" class="img-fluid" width="400px" height="400px"
+            style="margin: auto; display: block; border-radius: 15px;">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="contacto">
+    <div class="row container">
+      <div class="col">
+        <div class="col-lg-8 textContacto">
+          <h3>Contactanos</h3>
+          <p>
+            Si deseas contactarnos, puedes utilizar el siguiente formulario o
+            enviarnos un correo electrónico a nuestra dirección de contacto
+            lupita@autoescuela.com o llamarnos al número de teléfono
+            693819085 para hablar con uno de nuestros representantes.
+            Tambien puedes visitarnos en nuestras oficinas en la calle San Jose de la Vega 2, 28004 Madrid, España.
+            Nuestro profesores estarán encantados de ayudarte sobre cualquier duda posible.
+            <br /><br />Estamos dispuestos a ayudarte y responder cualquier pregunta que tengas sobre
+            nuestros cursos y servicios. ¡Esperamos poder ayudarte a obtener tu
+            licencia de conducir de manera fácil y segura!
+          </p>
+        </div>
+      </div>
+      <div class="col formulario">
+        <!--action="https://formsubmit.co/henryej25@gmail.com" una vez la aplicacion este desplegada mediante este servidor recibiremos los correos-->
+        <form class="miform">
+          <p>Nombre:</p>
+          <input type="text" id="name" placeholder="Ingrese su nombre" /><br />
+          <p>Correo electrónico:</p>
+          <input type="email" id="email" name="email" placeholder="Ingrese su correo de contacto" /><br />
+          <p>Teléfono:</p>
+          <input type="text" id="phone" name="phone" placeholder="Ingrese su número de contacto" /><br />
+          <p>Asunto:</p>
+          <input type="text" id="subject" name="subject" placeholder="Ingrese su Asunto" /><br />
+          <p>Mensaje:</p>
+          <textarea id="message" name="message"
+            placeholder="Escriba su mensaje y le atenderemos lo antes posible"></textarea><br />
+          <!--input type="hidden" name="_next" value="https://yourdomain.co/thanks.html"--->
+          <!---input type="hidden" name="_captcha" value="false"--->
+          <input type="button" value="Enviar" id="enviar" class="btn btn-primary"></input>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+{% endblock %}

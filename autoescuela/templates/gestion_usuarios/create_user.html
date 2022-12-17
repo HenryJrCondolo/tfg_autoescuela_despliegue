@@ -1,0 +1,67 @@
+{% extends 'base_generic_admin.html' %}
+    {% block content %}
+    <!-------------CONTENDER DEL Administrador-------------->
+    {% block title %}
+    <title>Admin | Registro de Usuarios</title>
+    {% endblock %}
+
+    <div class=" card" id="cardRegistro">
+      <div class="card-header">
+          <h1 class="text-center">Registro de Usuarios</h1>
+      </div>
+      <div id="" >
+        <div id="registro">
+          <form method="POST" enctype='multipart/form-data'>
+            {% csrf_token %}
+            <div class="row">
+              <div class="col">
+                <p>{{form.nombre.label}}</p>
+                {{ form.nombre }}
+                <p>{{form.apellidos.label}}</p>
+                {{ form.apellidos }}
+                <p>{{form.dni.label}}</p>
+                {{ form.dni }}
+                {% if form.dni.errors %}
+                <p>Ya existe un usuario con este DNI.</p>
+                {% endif %}
+                <p>Es administrador</p>
+                {{form.is_administrador}} 
+                <p>{{form.imagen_usuario.label}}</p>
+                {{ form.imagen_usuario }}
+                <p>{{form.email.label}}</p>
+                {{ form.email }}
+                {% if form.email.errors %}
+                <p>Ya existe un usuario con este email.</p>
+                {% endif %}
+              </div>
+              <div class="col">
+                <p>{{form.telefono.label}}</p>
+                {{ form.telefono }}
+                <p>{{form.direccion.label}}</p>
+                {{ form.direccion }}
+                <p>{{form.fecha_nacimiento.label}}</p>
+                {{ form.fecha_nacimiento }}
+                <p>{{form.permiso.label}}</p>
+                {{ form.permiso }}
+                <p>{{form.password1.label}}</p>
+                {{ form.password1 }}
+                <p>{{form.password2.label}}</p>
+                {{ form.password2 }}
+              </div>
+            </div>
+            <div class="row" width="500px" >
+              <p>{{form.groups.label}}</p>
+                {{form.groups}}
+            </div>
+            <div class="row">
+              <input type="submit" class="btn btn-primary" href="{% url 'listar_usuarios' %}" value="Registrar" id="btnRegistrar"></input>
+            
+              <a type="button" class="btn btn-danger" id="btnCancelar" value="Cancelar" href="{% url 'listar_usuarios' %}">Cacelar</a>
+            </div>
+            
+          </form>
+        </div>
+        
+      </div>
+  </div>
+  {% endblock %}

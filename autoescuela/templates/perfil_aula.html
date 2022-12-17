@@ -1,0 +1,92 @@
+
+
+{% extends "base_generic.html" %}
+{% block content %}
+{% block title %}
+<title> Autoescuela | Perfil Aula</title>
+{% endblock %}
+<!------------------CSS------------------>
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/perfilaula.css' %}" />
+
+<!-------------CONTENDER DEL PERFIL-------------->
+<div class="container divPerfil">
+    {% csrf_token %}
+    <div class="row">
+        <div class="col">
+            <h1 class="text-center">Perfil de Aula</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col container-fluid text-center">
+            {% load static %}
+            <a>
+                <img class="imgPerfil" src="/media/{{usuario.imagen_usuario}}" alt="Foto de perfil">
+            </a>
+
+        </div>
+        <div class="col">
+            <p>Nombre = {{usuario.nombre}}</p>
+            <p>Apellido = {{usuario.apellidos}}</p>
+            <p>Email = {{usuario.email}}</p>
+            <p>Telefono = {{usuario.telefono}}</p>
+            <p>Permiso = {{usuario.permiso.tipo_licencia}}</p>
+            <p>Fecha nacimiento = {{usuario.fecha_nacimiento}}</p>
+            <p>Fecha matriculación = {{usuario.fecha_matriculacion}}</p>
+        </div>
+    </div>
+</div>
+
+<!-------------CONTENDER DEL ESPACIO EXAMENES-------------->
+<div class="container divPerfil">
+    <div class="row">
+        <div class="col">
+            <h1 class="text-center">Espacio Examenes</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col" id="mediaExamenes">
+            <div class="row">
+                <h5> Porcentaje de media de examanes es de:</h5>
+            </div>
+
+            <div id="barra">
+                <div class="progress">
+                    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
+                        aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0" id="barProgreso"
+                        aria-valuemax="100" style="width: 0%"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="btn-group dropup" id="#menuTemas">
+                    <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Temas
+                    </button>
+                    <ul class="dropdown-menu dropmenuTema">
+
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col colPorcentaje" id="verPorcentajeTema">
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col text-center" id="realizarExamen">
+                    <a type="button " target="_blank" href="{% url 'aula_virtual' %}"
+                        class="btn btn-primary btn-lg btn-block">Realizar Examen</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!------------------SCRIPTS JS------------------>
+{% block scripts %}
+{% load static %}
+<script src="{% static 'js/perfil_aula.js' %}" type="module"></script>
+{% endblock %}
+
+{% endblock %}

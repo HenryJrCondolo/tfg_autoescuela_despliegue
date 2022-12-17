@@ -1,0 +1,35 @@
+{% extends 'base_generic_admin.html' %}
+    {% block content %}
+    <!-------------CONTENDER DEL Administrador-------------->
+    {% block title %}
+    <title>Admin | Modificar de Examen</title>
+    {% endblock %}
+
+    <div class=" card" id="cardRegistro">
+      <div class="card-header">
+          <h1 class="text-center">Modificación de Examen</h1>
+      </div>
+      <div id="" >
+        <div id="registro">
+          <form method="POST" enctype='multipart/form-data'>
+            {% csrf_token %}
+            <div class="row">
+              <div class="col">
+                <p>{{form.nombre_Examen.label}}</p>
+                {{ form.nombre_Examen }}
+                <p>{{form.preguntas.label}}</p>
+                {{ form.preguntas }}
+              </div>
+            </div>
+            <div class="row">
+              <input type="submit" class="btn btn-primary" href="{% url 'listar_examenes' %}" value="Modificar" id="btnRegistrar"></input>
+            
+              <a type="button" class="btn btn-danger" id="btnCancelar" value="Cancelar" href="{% url 'listar_examenes' %}">Cacelar</a>
+            </div>
+            
+          </form>
+        </div>
+        
+      </div>
+  </div>
+  {% endblock %}

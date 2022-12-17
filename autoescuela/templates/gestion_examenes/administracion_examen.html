@@ -1,0 +1,87 @@
+{% extends 'base_generic_admin.html' %}
+{% block content %}
+{% block title %}
+<title>Admin | Listado de Examenes</title>
+{% endblock %}
+<!-------------CONTENDER DEL Administrador-------------->
+{% if object_list %}
+<div class=" card" id="tablaUsuario">
+    <div class="card-header">
+        <div class="text-center">
+            <h1 class="text-center">Listado de Exámenes</h1>
+        </div>
+        <div class="row">
+            <div class="col text-center">
+                <button class="btn btn-primary"><a href="{% url 'registar_examen' %}">Crear Exámen Manual</a></button>
+            </div>
+            <div class="col text-center">
+                <button class="btn btn-primary"><a href="{% url 'registar_examen_auto' %}">Crear Exámen Automático</a></button>
+            </div>
+            <div class="col">
+                <form class="d-flex" method="get" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" name="buscar"
+                        aria-label="Buscar pregunta" value="{{request.GET.buscar}}">
+                    <button class="btn btn-outline-success" type="submit">Buscar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="table-responsive-md ">
+        <table class="table table-striped"">
+            <thead class=" table-dark">
+            <tr>
+                <th>Nombre de Examen</th>
+                <th>Preguntas</th>
+                <th>Acciones</th>
+            </tr>
+            </thead>
+            <tbody class="table table-striped">
+                {% if object_list %}
+                {% for examen in object_list %}
+                <tr>
+                    <td>{{examen.nombre_Examen}}</td>
+                    <td>{{examen.preguntas}}</td>
+                    <td>
+                        <div class="row">
+                            <button class="btn btn-primary"><a href="{% url 'modificar_examen' examen.id_Examen%}
+                                ">Editar</a></button>
+                        </div>
+                        <div class="row">
+                        <button class="btn btn-danger"><a href="{% url 'eliminar_examen' examen.id_Examen %
+                                }">Eliminar</a></button>
+                        </div>
+                    </td>
+
+                </tr>
+                {% endfor %}
+                {% else %}
+                <p>NO existen examenes</p>
+                {% endif %}
+            </tbody>
+            <tfoot>
+                <tr class="text-center">
+                    <td COLSPAN="5">
+                        <div>
+                            {% if object_list.paginator.num_pages > 4 %}
+                            <p>Pagina {{object_list.number}} de {{object_list.paginator.num_pages}}</p>
+                            {% if object_list.has_previous %}
+                            <a class="btn btn-primary"
+                                href="?page={{object_list.previous_page_number}}{% if request.GET.buscar %}&buscar={{ request.GET.buscar }}{% endif %}">Anterior</a>
+                            {% endif %}
+                            {% if object_list.has_next %}
+                            <a class="btn btn-primary"
+                                href="?page={{object_list.next_page_number}}{% if request.GET.buscar %}&buscar={{ request.GET.buscar }}{% endif %}">Siguiente</a>
+                            {% endif %}
+                            {% endif %}
+                        </div>
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+</div>
+{% else %}
+<p>NO existen ususarios</p>
+<button class="btn btn-primary"><a href="{% url 'index' %}">Incio</a></button>
+{% endif %}
+{% endblock %}

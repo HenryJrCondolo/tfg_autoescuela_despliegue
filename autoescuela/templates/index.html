@@ -1,0 +1,245 @@
+{% extends "base_generic.html" %} {% block content %}
+{% block title %}
+<title>Autoescuela | Inicio</title>
+{% endblock %}
+
+
+<!------------------CSS------------------>
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/index.css' %}" />
+
+<!-------------Start Carrusel-------------->
+
+<div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true"
+      aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item">
+      <div class="row" style="margin-top: 50px">
+        <div class="col">
+          <img src="/media/carrusel/carrusel1.png" class="float-end" id="imagenesCarrusel" alt="..." />
+        </div>
+        <div class="col" id="textoCarrusel">
+          <div class="col-lg-6">
+            <h5>
+              ¿Quieres obtener tu licencia de conducir de manera cómoda y a tu
+              propio ritmo?
+            </h5>
+            <p>
+              ¡Nuestra autoescuela online es la solución perfecta para ti!
+              Contamos con un sistema de aprendizaje en línea que te permitirá
+              estudiar desde cualquier lugar y en cualquier momento. ¡Inscríbete
+              ahora en nuestra autoescuela Lupita!
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-item active">
+      <div class="row" style="margin-top: 50px">
+        <div class="col">
+          <img src="/media/carrusel/carrusel2.png" class="float-end" id="imagenesCarrusel" alt="..." />
+        </div>
+        <div class="col" id="textoCarrusel">
+          <div class="col-lg-6">
+            <h5>
+              Si estás buscando una autoescuela para aprender a conducir motos,
+              ¡has llegado al lugar correcto!
+            </h5>
+            <p>
+              Contamos con profesores altamente cualificados y una amplia pista
+              de entrenamiento donde podrás practicar todas las maniobras
+              necesarias para convertirte en un conductor experto. ¡No pierdas
+              más tiempo y ven a conocernos! Estamos seguros de que nuestros
+              cursos te ayudarán a alcanzar tus metas de manera eficiente y
+              divertida. ¡Te esperamos!
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="row" style="margin-top: 50px">
+        <div class="col">
+          <img src="/media/carrusel/carrusel3.png" class="float-end" id="imagenesCarrusel" alt="..." />
+        </div>
+        <div class="col" id="textoCarrusel">
+          <div class="col-lg-6">
+            <h5>HORARIOS ACCESIBLES Y FLEXIBLES</h5>
+            <p>
+              Ofrecemos clases con horarios flexibles para que puedas adaptarlos
+              a tu disponibilidad. Nuestros profesores estarán dispuestos a
+              trabajar contigo para encontrar el mejor horario posible y que no
+              tengas que renunciar a tus actividades habituales mientras
+              obtienes tu licencia de conducir. Además, nuestro sistema de
+              aprendizaje en línea te permite estudiar cuando y donde quieras.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+<!----------------End Carrusel---------->
+
+<!----------------Start Cards------------>
+
+<div class="container-fluid row row-cols-1 row-cols-md-4 g-6" id="containerCards">
+  <div class="col">
+    <div class="card">
+      <img src="/media/imagenes_cards/coche.png" class="container" alt="..." />
+      <div class="card-body">
+        <h5 class="card-title">Permiso B</h5>
+        <p class="card-text" style="text-align: justify;">
+          Es el carnet de conducir que todos estamos deseando obtener nada más
+          cumplir los 18 años, algunos incluso antes. Como dice algún anuncio
+          ¿te gusta conducir?, nosotros estamos convencidos que sí y estás
+          deseando confirmarlo. Nosotros te ayudarmos a averiguarlo, sigue
+          leyendo.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card">
+      <img src="/media/imagenes_cards/moto.png" class="container" alt="..." />
+      <div class="card-body">
+        <h5 class="card-title">Permiso A</h5>
+        <p class="card-text" style="text-align: justify;">
+          Se pueden conducir CICLOMOTORES de todo tipo, para hacerlo con
+          pasajero se deben tener 18 años. Su obtención exige DOS PRUEBAS DE
+          EXAMEN, una teórica específica de 20 preguntas, otra en circuito
+          cerrado al tráfico en la que se demostrará el dominio y habilidad con
+          el vehículo.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card">
+      <img src="/media/imagenes_cards/camion.png" class="container" alt="..." />
+      <div class="card-body">
+        <h5 class="card-title">Permiso C</h5>
+        <p class="card-text" style="text-align: justify;">
+          Con el carnet C podrás conducir automóviles cuya masa máxima
+          autorizada exceda de 3.500 Kg. que estén diseñados y construidos para
+          el transporte de no más de ocho pasajeros además del conductor. Dichos
+          automóviles podrán llevar enganchado un remolque cuya masa máxima
+          autorizada no exceda de 750 Kg.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card">
+      <img src="/media/imagenes_cards/autobus.png" class="container" alt="..." />
+      <div class="card-body">
+        <h5 class="card-title">Permiso D</h5>
+        <p class="card-text" style="text-align: justify;">
+          Con el carnet D podrás conducir automóviles diseñados y construidos
+          para el transporte de más de ocho pasajeros además del conductor.
+          Dichos automóviles podrán llevar enganchado un remolque cuya masa
+          máxima autorizada no exceda de 750 Kg.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!----------------End Cards------------>
+
+<div class="contacto">
+  <div class="row container">
+    <div class="col">
+      <div class="col-lg-8 textContacto">
+        <h3>Aula Virtual 24h</h3>
+        <p>
+          Si estás buscando una forma conveniente y efectiva para prepararte para el examen de conducir, mi autoescuela
+          virtual es perfecta para ti.
+          Ofrecemos acceso las 24 horas para que puedas hacer los test cuando sea más conveniente para ti, y nuestro
+          programa de estudio está diseñado
+          para brindarte todas las herramientas que necesitas para aprobar el examen en una sola vez. Además, contamos
+          con instructores altamente
+          calificados que están dispuestos a ayudarte en cualquier momento. ¡No pierdas más tiempo y únete a nuestra
+          autoescuela virtual hoy mismo!
+        </p>
+      </div>
+    </div>
+    <div class="col mt-5">
+      <div class="mt-5">
+          <img src="/media/imagenes_autoescuela/Captura desde 2022-12-14 20-42-09.png" class="container" alt="..." 
+          />
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <a href="{% url 'perfil_aula' %}" class="btn btn-primary" style="width: 95%; margin: 20px; padding: 10px;">Acceder</a>
+  </div>
+</div>
+
+  <!----------------Start Contacto------------>
+
+  <div class="contacto">
+    <div class="row container">
+      <div class="col">
+        <div class="col-lg-8 textContacto">
+          <h3>Contactanos</h3>
+          <p>
+            Si deseas contactarnos, puedes utilizar el siguiente formulario o
+            enviarnos un correo electrónico a nuestra dirección de contacto
+            lupita@autoescuela.com o llamarnos al número de teléfono
+            693819085 para hablar con uno de nuestros representantes.
+            Tambien puedes visitarnos en nuestras oficinas en la calle San Jose de la Vega 2, 28004 Madrid, España.
+            Nuestro profesores estarán encantados de ayudarte sobre cualquier duda posible.
+            <br /><br />Estamos dispuestos a ayudarte y responder cualquier pregunta que tengas sobre
+            nuestros cursos y servicios. ¡Esperamos poder ayudarte a obtener tu
+            licencia de conducir de manera fácil y segura!
+          </p>
+        </div>
+      </div>
+      <div class="col formulario">
+        <!--action="https://formsubmit.co/henryej25@gmail.com" una vez la aplicacion este desplegada mediante este servidor recibiremos los correos-->
+        <form>
+          <p>Nombre:</p>
+          <input type="text" id="name" placeholder="Ingrese su nombre" /><br />
+          <p>Correo electrónico:</p>
+          <input type="email" id="email" name="email" placeholder="Ingrese su correo de contacto" /><br />
+          <p>Teléfono:</p>
+          <input type="text" id="phone" name="phone" placeholder="Ingrese su número de contacto" /><br />
+          <p>Asunto:</p>
+          <input type="text" id="subject" name="subject" placeholder="Ingrese su Asunto" /><br />
+          <p>Mensaje:</p>
+          <textarea id="message" name="message"
+            placeholder="Escriba su mensaje y le atenderemos lo antes posible"></textarea><br />
+          <!--input type="hidden" name="_next" value="https://yourdomain.co/thanks.html"--->
+          <!---input type="hidden" name="_captcha" value="false"--->
+          <input type="button" value="Enviar" id="enviar" class="btn btn-primary"></input>
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+  <!-------------End Contacto------------->
+
+  <!-------------Scripts------------->
+  {% block scripts %}
+  {% load static %}
+  <script src="{% static 'js/index.js' %}" type="module"></script>
+  {% endblock %}
+
+  {% endblock %}

@@ -1,0 +1,89 @@
+/*CSS DEL CARRUSEL*/
+  #carouselExampleDark {
+    margin: auto !important;
+    margin-top: 25px !important;
+    min-height: 500px !important;
+    max-width: 75%;
+    background-color: rgba(255, 255, 255, 0.925);
+    border-radius: 5%;
+  }
+  #textoCarrusel {
+    display: flex;
+    text-align: justify;
+  
+  }
+  #imagenesCarrusel {
+    height: 280px !important;
+    max-width: 340px !important;
+    border-radius: 10%;
+    -webkit-border-radius: 10%;
+    -moz-border-radius: 10%;
+    -ms-border-radius: 10%;
+    -o-border-radius: 10%;
+  }
+
+/*CSS DE LOS CARDS*/
+
+  .card {
+    align-items: center;
+    justify-content: center;
+    margin-top: 25px !important;
+    margin-bottom: 25px !important;
+    min-height: 92%;
+    background-color: rgba(255, 255, 255, 0.925);
+    border-radius: 2%;
+    -webkit-border-radius: 2%;
+    -moz-border-radius: 2%;
+    -ms-border-radius: 2%;
+    -o-border-radius: 2%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    opacity: 0.95;
+  }
+  div.card > img {
+    border-radius: 5%;
+    -webkit-border-radius: 5%;
+    -moz-border-radius: 5%;
+    -ms-border-radius: 5%;
+    -o-border-radius: 5%;
+    margin: 15px;
+  }
+
+#containerCards{
+    margin: auto !important;
+    margin-top: 25px !important;
+    max-width: 75%;
+  }
+  
+  /*CSS FORM CONTACT*/
+  .contacto{
+    margin: auto !important;
+    margin-top: 25px !important;
+    margin-bottom: 25px !important;
+    max-width: 80%;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.925);
+    border-radius: 5%;
+    -webkit-border-radius: 5%;
+    -moz-border-radius: 5%;
+    -ms-border-radius: 5%;
+    -o-border-radius: 5%;
+  }
+  
+  .formulario p,.formulario #subject, .formulario #name, .formulario #phone, .formulario #email,  .formulario #message{
+    margin-bottom: 10px;
+  }
+  .formulario #email,.formulario #subject,  .formulario #message,.formulario #name, .formulario #phone{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: #fff;
+    box-sizing: border-box;
+    font-size: 16px;
+    resize: none;
+  }
+  .textContacto{
+    text-align: justify;
+    margin: auto;
+    padding: 10% 0;
+  }

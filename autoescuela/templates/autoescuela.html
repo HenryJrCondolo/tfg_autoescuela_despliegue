@@ -1,0 +1,166 @@
+{% extends "base_generic.html" %}
+
+{% load static %}
+
+{% block title %}<title>Autoescuela | Nosotros </title>{% endblock %}
+
+
+
+
+
+{% block content %}
+
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/autoescuela.css' %}" />
+<div class="container divPerfil">
+    {% csrf_token %}
+    <div class="row">
+        <div class="col">
+            <h1 class="text-center">Autoescuela lupita</h1>
+            <br />
+            <h5 class="text-center">Aprende a conducir de manera segura y eficiente con nuestra autoescuela</h5>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col" style= "text-align: justify;">
+            <p>
+                Si quieres aprender a conducir de manera segura y eficiente, ¡ven a nuestra autoescuela!
+                Contamos con instructores altamente calificados y una flota de vehículos modernos y bien
+                mantenidos para que puedas practicar en las mejores condiciones. Además, ofrecemos una amplia
+                gama de cursos adaptados a tus necesidades, desde principiantes hasta conductores
+                experimentados que desean mejorar sus habilidades. ¡No te pierdas la oportunidad de
+                convertirte en un conductor confiado y responsable!
+            </p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <h2 class="text-center"> Aquí te presentamos algunas de las principales ventajas de nuestra autoescuela:
+            </h2>
+            <br />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col" >
+            <ul>
+                <li>
+                    Contamos con instructores altamente calificados y experimentados que te enseñarán todo lo
+                    que necesitas saber para manejar de manera segura y eficiente.
+                </li>
+                <li>
+                    Ofrecemos una amplia gama de cursos adaptados a tus necesidades, desde principiantes hasta
+                    conductores experimentados que desean mejorar sus habilidades.
+                </li>
+                <li>
+                    Disponemos de una flota de vehículos modernos y bien mantenidos para que puedas practicar en las
+                    mejores condiciones.
+                </li>
+                <li>
+                    Realizamos exámenes prácticos y teóricos en nuestras instalaciones, para que puedas obtener tu
+                    licencia de manera rápida y sin complicaciones.
+                </li>
+                <li>
+                    Estamos comprometidos con ofrecer un servicio de alta calidad a un precio razonable. ¡Te
+                    garantizamos que obtendrás un excelente valor por tu dinero!
+                </li>
+            </ul>
+        </div>
+        <div class="col">
+            <img src="/media/imagenes_autoescuela/Captura desde 2022-12-14 18-41-34.png" class="img-fluid" width="400px"
+                height="400px" alt="FLota Coches" style="margin: auto; display: block; border-radius: 15px;">
+        </div>
+    </div>
+    <div class="row " style="text-align: justify;">
+        <div class="col">
+            <h2>¿Por qué elegirnos?</h2>
+            <br />
+            <p>
+                Si estás buscando una autoescuela en la que obtener tu licencia ¡has encontrado el lugar adecuado! En
+                nuestra
+                autoescuela, contamos con instructores calificados y experimentados que te guiarán paso a paso en tu
+                proceso de aprendizaje. Ofrecemos una amplia
+                variedad de opciones de enseñanza, desde clases teóricas hasta prácticas de conducción en nuestro
+                moderno circuito de prácticas. Además, ofrecemos
+                descuentos y promociones especiales para que puedas obtener tu licencia de conducir de manera asequible.
+                ¡Visítanos hoy mismo y descubre por qué
+                somos la mejor opción para tu aprendizaje de la conducción!
+            </p>
+        </div>
+    </div>
+    <div class="row" style="text-align: justify;">
+        <div class="col" >
+            <h2>Nuestros instructores</h2>
+            <br />
+            <p>
+                Todos nuestros instructores de autoescuela son profesionales altamente calificados y experimentados.
+                Cuentan con amplios conocimientos en materias relacionadas con la seguridad vial y la conducción, y han
+                pasado por un riguroso proceso de selección y capacitación para garantizar que ofrecen una enseñanza de
+                alta calidad a nuestros estudiantes. Además, nuestros instructores son personas amables y pacientes que
+                están comprometidos con ayudar a nuestros estudiantes a obtener su licencia de conducir de manera segura
+                y eficiente. En resumen, nuestros instructores son profesionales altamente capacitados que brindan una
+                enseñanza de calidad en un entorno acogedor y respetuoso.
+            </p>
+        </div>
+    </div>
+    <div class="contacto">
+        <div class="row container">
+          <div class="col">
+            <div class="col-lg-8 textContacto">
+              <h3>Contactanos</h3>
+              <p>
+                Si deseas contactarnos, puedes utilizar el siguiente formulario o
+                enviarnos un correo electrónico a nuestra dirección de contacto
+                lupita@autoescuela.com o llamarnos al número de teléfono
+                693819085 para hablar con uno de nuestros representantes. 
+                Tambien puedes visitarnos en nuestras oficinas en la calle San Jose de la Vega 2, 28004 Madrid, España. 
+                Nuestro profesores estarán encantados de ayudarte sobre cualquier duda posible.
+                <br/><br/>Estamos dispuestos a ayudarte y responder cualquier pregunta que tengas sobre
+                nuestros cursos y servicios. ¡Esperamos poder ayudarte a obtener tu
+                licencia de conducir de manera fácil y segura!
+              </p>
+            </div>
+          </div>
+          <div class="col formulario">
+            <!--action="https://formsubmit.co/henryej25@gmail.com" una vez la aplicacion este desplegada mediante este servidor recibiremos los correos-->
+            <form class="miform">
+              <p>Nombre:</p>
+              <input type="text" id="name" placeholder="Ingrese su nombre" /><br />
+              <p>Correo electrónico:</p>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Ingrese su correo de contacto"
+              /><br />
+              <p>Teléfono:</p>
+              <input
+                type="text"
+                id="phone"
+                name="phone"
+                placeholder="Ingrese su número de contacto"
+              /><br />
+              <p>Asunto:</p>
+              <input
+                type="text"
+                id="subject"
+                name="subject"
+                placeholder="Ingrese su Asunto"
+              /><br />
+              <p>Mensaje:</p>
+              <textarea
+                id="message"
+                name="message"
+                placeholder="Escriba su mensaje y le atenderemos lo antes posible"
+              ></textarea
+              ><br />
+              <!--input type="hidden" name="_next" value="https://yourdomain.co/thanks.html"--->
+              <!---input type="hidden" name="_captcha" value="false"--->
+              <input type="button" value="Enviar" id="enviar" class="btn btn-primary"></input>
+            </form>
+          </div>
+        </div>
+      </div>
+</div>
+
+
+{% endblock %}
