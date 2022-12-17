@@ -1,0 +1,102 @@
+.preguntaform{
+    margin: auto;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    background-color: rgba(255, 255, 255, 0.74);
+    border-radius: 5%;
+    padding: 20px 30px;
+    -webkit-border-radius: 5%;
+    -moz-border-radius: 5%;
+    -ms-border-radius: 5%;
+    -o-border-radius: 5%;
+    box-shadow: 0 0 10px rgb(0, 132, 255);
+    opacity: 0.95;
+    width: 80% ;
+    max-height: 60% !important; ;
+  }
+
+.preguntasbuttons{
+    margin: auto;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    background-color: rgba(255, 255, 255, 0.74);
+    border-radius: 5%;
+    padding: 10px;
+    -webkit-border-radius: 5%;
+    -moz-border-radius: 5%;
+    -ms-border-radius: 5%;
+    -o-border-radius: 5%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    opacity: 0.95;
+    width: 80% ;
+    max-height: auto !important;
+}
+
+
+a#colPreguntas.col{
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+}
+
+.preguntasbuttons button{
+    width: 55px !important;
+    height: 45px !important;
+    margin-bottom: 15px;
+    
+}
+
+#imgPregunta{
+    max-width: 325px !important;
+    max-height: 265px !important;
+    min-height: 88%;
+    min-width: 88%;
+    margin-bottom: 10px;
+}
+
+.preguntaform h5{
+    margin: 0;
+    text-align: center;
+    min-height: 60px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid;
+    font-size: 20px;
+    font-weight: bold
+    
+}
+div.form-check{
+    margin-right: 20px !important;
+    padding: 15;
+}
+.preguntaform label{
+    width: 100% !important;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 20px !important;
+}
+.preguntaform input{
+    width: 20px;
+    height: 20px;
+    margin-left: 15px;
+}
+.preguntaform button{
+    margin: 0 auto;
+    width: 75% !important;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    padding: 11px 10px;
+}
+
+#question_count{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 11px 10px;
+    font-weight: bold
+}
+
+#temporizador{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color : rgb(255, 255, 255);
+}

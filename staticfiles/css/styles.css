@@ -1,0 +1,70 @@
+body {
+  background: #bfbfbf;
+  background-image: url(/media/background/background_admin.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  font-family: Arial, Helvetica, sans-serif;
+  flex-direction: column;
+  min-height: 100vh;
+  /* Margin bottom by footer height */
+  margin-bottom: auto !important;
+}
+/* CSSS DE LA BARRA DE NAVEGACION */
+.nav-link,
+.navbar-brand {
+  font-size: 19px;
+  color: rgb(255, 255, 255);
+}
+
+.nav-link:hover,
+.navbar-brand:hover {
+  color: rgb(147, 211, 234);
+}
+
+#grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+.navbar-brand {
+  grid-column: 2/3;
+}
+.navbar-collapse {
+  grid-column: 4/5 !important;
+  text-align:center;
+
+}
+.nav-item {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.minavbar{
+  background-image: var(--bs-gradient)!important;
+  --bs-bg-opacity: 1;
+  background-color: rgba(var(--bs-dark-rgb),var(--bs-bg-opacity))!important;
+}
+
+/* CSS DEL FOOTER */
+
+.footer {
+  margin-top: auto;
+  background-image: url("footer.png");
+  background-repeat: no-repeat;
+  opacity: 0.80;
+  background-size: cover;
+  background-position: center;
+  /* Set the fixed height of the footer here */
+  height: auto !important;
+}
+
+.list-unstyled ul li{
+  font-size: 20px;
+  margin: 25px !important;
+}
+
+
+

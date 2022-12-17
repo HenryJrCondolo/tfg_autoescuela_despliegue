@@ -1,0 +1,80 @@
+body {
+    background: #bfbfbf;
+    background-image: url(/media/background/background_admin.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    font-family: Arial, Helvetica, sans-serif;
+    flex-direction: column;
+    min-height: 100vh;
+    /* Margin bottom by footer height */
+    margin-bottom: auto !important;
+  }
+
+@media screen and (max-width: 600px) {
+    body {
+        width: auto;
+    }
+}
+
+.divPerfil {
+    margin: auto;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    background-color: rgba(255, 255, 255, 0.74) !important;
+    border-radius: 5%;
+    padding: 20px 50px;
+    -webkit-border-radius: 5%;
+    -moz-border-radius: 5%;
+    -ms-border-radius: 5%;
+    -o-border-radius: 5%;
+    box-shadow: 0 0 10px rgba(0, 128, 255, 0.452);
+    opacity: 0.95;
+    width: 60% ;
+    max-height: 60% !important; ;
+}
+.contacto{
+    margin: auto !important;
+    margin-top: 25px !important;
+    margin-bottom: 15px !important;
+    padding: 20px;
+    border-radius: 5%;
+    -webkit-border-radius: 5%;
+    -moz-border-radius: 5%;
+    -ms-border-radius: 5%;
+    -o-border-radius: 5%;
+  }
+  
+  .formulario p,.formulario #subject, .formulario #name, .formulario #phone, .formulario #email,  .formulario #message{
+    margin-bottom: 10px;
+  }
+  .formulario #email,.formulario #subject,  .formulario #message,.formulario #name, .formulario #phone{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: #fff;
+    box-sizing: border-box;
+    font-size: 16px;
+    resize: none;
+  }
+  .textContacto{
+    text-align: justify;
+    margin: auto;
+    padding: 10% 0;
+  }
+  .miform{
+    background-color: rgba(255, 255, 255, 0.74) !important;
+    border-radius: 5%;
+    padding: 20px 50px;
+    -webkit-border-radius: 5%;
+    -moz-border-radius: 5%;
+    -ms-border-radius: 5%;
+    -o-border-radius: 5%;
+    box-shadow: 0 0 10px rgba(0, 128, 255, 0.452);
+    opacity: 0.95;
+    width: 100% ;
+    max-height: 100% !important; ;
+  }

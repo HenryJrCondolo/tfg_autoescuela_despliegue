@@ -1,0 +1,184 @@
+body {
+    background: #bfbfbf;
+    background-image: url(/media/background/background_admin.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    font-family: Arial, Helvetica, sans-serif;
+    flex-direction: column;
+  }
+nav {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 225px!important;
+    background-color: rgb(31, 31, 31);
+    font-size: 16px;
+  }
+  
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    line-height: 16px;
+  }
+  
+  nav li {
+    background-color: rgb(31, 31, 31);
+  }
+  
+  nav li a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    padding: 20px;
+  }
+  nav ul ul a{
+    background-color: #333;
+    
+  }
+  nav ul ul{
+    height: 0px;
+    overflow: hidden;
+    transition: all 0.5s;
+  }
+  nav ul li:hover ul{
+    height: 125px ;
+  }
+
+  nav ul li:hover ul#tresOp{
+    height: 225px !important;
+  }
+
+  nav ul ul li a:hover{
+    background-color: rgb(39, 110, 241) !important;
+  }
+  
+  nav li a:hover {
+    background-color: rgb(41, 59, 224) !important;
+  }
+  a:hover {
+     color: #fff; 
+}
+
+#tablaUsuario{
+  position: relative;
+  float: left;
+    border: 1px solid #333;
+    min-height: 90% !important;
+    width: auto !important;
+    margin: 30px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    margin-inline-start: 250px;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: rgba(255, 255, 255, 0.788);
+}
+
+#cardRegistro{
+    position: absolute;
+    top: 50%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+    border: 1px solid #333;
+    height: min-content;
+    width: auto;
+    min-height: 90%;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.788);
+}
+
+#imgUser{
+    display: block; 
+    margin: auto;
+    margin-top: 25px;
+    border-radius: 50%;
+    border: 1px solid #333;
+}
+
+.bienvenido{
+    margin: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+}
+
+#registro{
+    max-width: 97%;
+    margin-left: 25px;
+    margin-right:25px;
+    padding-left: 10px;
+    padding-right: 10px;
+
+}
+#registro .form-control, #registro p , #registro #fecha_nacimiento, #registro #is_administrador{
+    margin: auto;
+    max-width: 450px;
+    height: 35px ;
+    margin-top: 5px;
+}
+
+#btnRegistrar{
+    width: 100%;
+    margin: auto;
+    height: 32px;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    max-width: 450px;
+}
+#btnCancelar{
+    width: 100%;
+    margin: auto;
+    height: 32px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    max-width: 450px;
+}
+#registro #is_administrador{
+  height: 15px;
+  margin: 10px 0px;
+}
+
+button.btn.btn-primary {
+    min-width: 60%;
+    background-color: rgb(30, 130, 217) !important;
+    border-color: rgb(39, 110, 241) !important;
+    border: rgb(0, 0, 0) solid !important;
+    height: 37px;
+
+}
+button.btn.btn-primary:hover{
+    background-color: rgb(33, 61, 220) !important;
+    border-color: rgb(0, 0, 0) !important;
+    min-width: 60%;
+    border: rgb(0, 0, 0) solid !important;
+}
+button.btn.btn-danger{
+    background-color: rgb(255, 0, 0) !important;
+    border-color: rgb(255, 0, 0) !important;
+    min-width: 60%;
+    border: rgb(0, 0, 0) solid !important;
+    height: 37px;
+}
+button.btn.btn-primary a{
+    color: rgba(255, 255, 255, 0.877);
+}
+ button.btn.btn-danger a{
+    color: rgba(0, 0, 0, 0.877);
+}
+button.btn.btn-danger:hover{
+    background-color: rgb(144, 3, 3) !important;
+    border-color: rgb(255, 255, 255) !important;
+    min-width: 60%;
+    border: rgb(0, 0, 0) solid !important;
+}
+
+#registro select#preguntas.form-control{
+    height: 350px !important;
+    margin-top: 5px;
+}
